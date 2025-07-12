@@ -1,0 +1,135 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  username      String         @unique
+  name          String
+  password      String
+  role          Role           @default(USER)
+  avatar        String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  answers       Answer[]
+  notifications Notification[]
+  questions     Question[]
+  votes         Vote[]
+  starredQuestions StarredQuestion[]
+
+  @@map("users")
+}
+
+model Question {
+  id          String        @id @default(cuid())
+  title       String
+  description String
+  authorId    String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  answers     Answer[]
+  tags        QuestionTag[]
+  starredBy   StarredQuestion[]
+  author      User          @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@map("questions")
+}
+
+model Answer {
+  id         String   @id @default(cuid())
+  content    String
+  authorId   String
+  questionId String
+  isAccepted Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  author     User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  votes      Vote[]
+
+  @@map("answers")
+}
+
+model Tag {
+  id          String        @id @default(cuid())
+  name        String        @unique
+  description String?
+  color       String?
+  createdAt   DateTime      @default(now())
+  questions   QuestionTag[]
+
+  @@map("tags")
+}
+
+model QuestionTag {
+  id         String   @id @default(cuid())
+  questionId String
+  tagId      String
+  tag        Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([questionId, tagId])
+  @@map("question_tags")
+}
+
+model Vote {
+  id        String   @id @default(cuid())
+  userId    String
+  answerId  String
+  type      VoteType
+  createdAt DateTime @default(now())
+  answer    Answer   @relation(fields: [answerId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, answerId])
+  @@map("votes")
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  type      NotificationType
+  title     String
+  content   String
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+}
+
+model StarredQuestion {
+  id         String   @id @default(cuid())
+  userId     String
+  questionId String
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+  @@map("starred_questions")
+}
+
+enum Role {
+  GUEST
+  USER
+  ADMIN
+}
+
+enum VoteType {
+  UPVOTE
+  DOWNVOTE
+}
+
+enum NotificationType {
+  ANSWER_RECEIVED
+  COMMENT_RECEIVED
+  MENTION_RECEIVED
+  ANSWER_ACCEPTED
+}
