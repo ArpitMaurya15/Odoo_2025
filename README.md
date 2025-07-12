@@ -39,7 +39,7 @@ Admin Role
 
   ## Team Details
   ### Team Nam : Synergy
-- Member 1 : Arpit Maurya(leader)[mail](arpitkm2103@gmail.com)
+- Member 1 : Arpit Maurya(leader)(arpitkm2103@gmail.com)
 - Member 2 : Rushda Rais
 - Member 3 :Sakshaum Jaiswal
 - Member 4 : Srishti Singh 
