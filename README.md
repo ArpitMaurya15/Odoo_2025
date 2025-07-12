@@ -47,6 +47,14 @@ Notification System
   ## Mockup Link
   [Mockup Link](https://link.excalidraw.com/l/65VNwvy7c4X/9mhEahV0MQg)
 
+  ### Admin Account
+- Email: `admin@stackit.com`
+- Password: `admin123`
+
+### User Accounts
+- Email: `john@example.com` / Password: `user123`
+- Email: `jane@example.com` / Password: `user123`
+
   ## Team Details
   ### Team Nam : Synergy
 - Member 1 : Arpit Maurya(leader)(arpitkm2103@gmail.com)
