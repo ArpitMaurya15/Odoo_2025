@@ -1,41 +1,51 @@
-# ReWear – Community Clothing Exchange
+# StackIt – A Minimal Q&A Forum Platform
 ## Overview:
-Develop ReWear, a web-based platform that enables users to exchange unused clothing
-through direct swaps or a point-based redemption system. The goal is to promote sustainable
-fashion and reduce textile waste by encouraging users to reuse wearable garments instead of
-discarding them.
+StackIt is a minimal question-and-answer platform that supports collaborative
+learning and structured knowledge sharing. It’s designed to be sim ple, user- friendly,
+and focused on the core experience of asking and answering questions within a
+com m unity
 ## Features:
-User Authentication
-- Email/password signup and login
+Ask Question
+Users can submit a new question using:
+- Title – Short and descriptive
+- Description – Written using a rich text editor 
+- Tags – Multi-select input (e.g., React , JWT)
 
-Landing Page
-- Platform introduction
-- Calls-to-action: “Start Swapping”, “Browse Items”, “List an Item”
-- Featured items carousel
+Rich Text Editor Features
+The description editor should support:
+- Bold, Italic, Strikethrough
+- Num bered lists, Bullet points
+- Emoji insertion
+- Hyperlink insertion (URL)
+- Image upload
+- Text alignment – Left, Center, Right
 
-User Dashboard
-- Profile details and points balance
-- Uploaded items overview
-- Ongoing and completed swaps list
+Answering Questions
+- Users can post answers to any question
+- Answers can be form atted using the same rich text editor
+- Only logged- in users can post answers
 
-Item Detail Page
-- Image gallery and full item description
-- Uploader info
-- Options: “Swap Request” or “Redeem via Points”
-- Item availability status
+Voting & Accepting Answers
+- Users can upvote or downvote answers
+- Question owners can mark one answer as accepted
+  
+Tagging
+- Questions must include relevant tags
 
-add New Item Page
-- Upload images
-- Enter title, description, category, type, size, condition, and tags
-- Submit to list item
+Notification System
+- A notification icon (bell) appears in the top navigation bar
+- Users are notified when:
+  * Someone answers their question
 
-Admin Role
-- Moderate and approve/reject item listings
-- Remove inappropriate or spam items
-- Lightweight admin panel for oversight
+  * Someone com m ents on their answer
+
+  * Someone mentions them using @user name
+
+- The icon shows the num ber of unread notifications
+- Clicking the icon opens a dropdown with recent notifications
 
   ## Mockup Link
-  [Mockup Link](https://app.excalidraw.com/l/65VNwvy7c4X/zEqG7IJrg0)
+  [Mockup Link](https://link.excalidraw.com/l/65VNwvy7c4X/9mhEahV0MQg)
 
   ## Team Details
   ### Team Nam : Synergy
