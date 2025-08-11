@@ -1,61 +1,122 @@
 # StackIt – A Minimal Q&A Forum Platform
 ## Overview:
-StackIt is a minimal question-and-answer platform that supports collaborative
-learning and structured knowledge sharing. It’s designed to be sim ple, user- friendly,
-and focused on the core experience of asking and answering questions within a
-community
-
-# [VIDEO DEMONSTRATION](https://drive.google.com/file/d/1U0dG0n1OKF_H2kLj_XDtpjAGqGUbBMzg/view)
+The overarching vision for GlobeTrotter is to become a personalized,
+intelligent, and collaborative platform that transforms the way individuals plan and experience travel. The platform aims to empower users to
+dream, design, and organize trips with ease by offering an end-to-end
+travel planning tool that combines flexibility and interactivity.
+It envisions a world where users can explore global destinations, visualize their journeys through structured itineraries, make cost-effective
+decisions, and share their travel plans within a community—making
+travel planning as exciting as the trip itself
 ## Features:
-Ask Question
-Users can submit a new question using:
-- Title – Short and descriptive
-- Description – Written using a rich text editor 
-- Tags – Multi-select input (e.g., React , JWT)
+Login / Signup Screen
+- Description: Entry point of the app allowing users to create or access
+their account.
+- Purpose: Authenticate users to manage personal travel plans.
+- Key Functionality/Components:
+Email & password fields, Login button, Signup link, "Forgot Password",
+basic validation
 
-Rich Text Editor Features
-The description editor should support:
-- Bold, Italic, Strikethrough
-- Num bered lists, Bullet points
-- Emoji insertion
-- Hyperlink insertion (URL)
-- Image upload
-- Text alignment – Left, Center, Right
+Dashboard / Home Screen
+- Description: Central hub showing upcoming trips, popular cities, and
+quick actions.
+- Purpose: Allows users to navigate to their trips and explore inspiration.
+- Key Functionality/Components:
+Welcome message, list of recent trips, “Plan New Trip” button,
+recommended destinations, budget highlights.
 
-Answering Questions
-- Users can post answers to any question
-- Answers can be form atted using the same rich text editor
-- Only logged- in users can post answers
 
-Voting & Accepting Answers
-- Users can upvote or downvote answers
-- Question owners can mark one answer as accepted
+Create Trip Screen
+- Description: Form to initiate a new trip by providing a name, travel dates,
+and a description.
+- Purpose: Begins the process of creating a personalized travel plan.
+- Key Functionality/Components:
+Trip name, start & end dates, trip description, cover photo upload
+(optional), save button.
+
+My Trips (Trip List) Screen
+- Description: List view of all trips created by the user with basic summary
+data.
+- Purpose: Easily access and manage existing or upcoming trips.
+- Key Functionality/Components:
+Trip cards showing name, date range, destination count, edit/view/delete
+actions.
   
-Tagging
-- Questions must include relevant tags
+ Itinerary Builder Screen
+- Description: Interface to add cities, dates, and activities for each stop.
+- Purpose: Construct the full day-wise trip plan in an interactive format.
+- Key Functionality/Components:
+“Add Stop” button, select city and travel dates, assign activities to
+each stop, reorder cities.
 
-Notification System
-- A notification icon (bell) appears in the top navigation bar
-- Users are notified when:
-  * Someone answers their question
+Itinerary View Screen
+- Description: Visual representation of the completed trip itinerary.
+- Purpose: Review the full plan in a structured format (timeline or
+grouped by cities).
+- Key Functionality/Components:
+Day-wise layout, city headers, activity blocks with time and cost,
+view mode toggle (calendar/list).
 
-  * Someone com m ents on their answer
+City Search
+- Description: Search interface to find and add cities to a trip, with
+info like country, cost index, and popularity.
+- Purpose: Discover and include relevant cities in the itinerary.
+- Key Functionality/Components:
+Search bar, list of cities with meta info, “Add to Trip” button, filter
+by country/region.
 
-  * Someone mentions them using @user name
+Activity Search
+- Description: Browse and select things to do in each stop, categorized
+by interest or cost.
+- Purpose: Enrich trips with experiences like sightseeing, food tours, or
+adventure activities.
+- Key Functionality/Components:
+Activity filters (type, cost, duration), add/remove buttons, quick view
+of description and images.
 
-- The icon shows the num ber of unread notifications
-- Clicking the icon opens a dropdown with recent notifications
+Trip Budget & Cost Breakdown Screen
+- Description: Summarized financial view showing estimated total cost
+and breakdowns.
+- Purpose: Helps travelers stay informed and within budget.
+- Key Functionality/Components:
+Cost breakdown by transport, stay, activities, meals; pie/bar charts,
+average cost per day, alerts for overbudget days.
 
-  ## Mockup Link
-  [Mockup Link](https://link.excalidraw.com/l/65VNwvy7c4X/9mhEahV0MQg)
+Trip Calendar / Timeline Screen
+- Description: Calendar-based or vertical timeline view of the full itinerary.
+- Purpose: Helps users visualize the journey and daily plan flow.
+- Key Functionality/Components:
+Calendar component, expandable day views, drag-to-reorder activities,
+quick editing options.
 
-  ### Admin Account
-- Email: `admin@stackit.com`
-- Password: `admin123`
+Shared/Public Itinerary View Screen
+- Description: Public page displaying a sharable version of an itinerary.
+- Purpose: Allows others to view, get inspired, or copy the trip.
+- Key Functionality/Components:
+Public URL, itinerary summary, “Copy Trip” button, social media sharing,
+read-only view.
 
-### User Accounts
-- Email: `john@example.com` / Password: `user123`
-- Email: `jane@example.com` / Password: `user123`
+User Profile / Settings Screen
+- Description: User settings page to update profile information and
+preferences.
+- Purpose: Enables users to control their data, preferences, and privacy.
+- Key Functionality/Components:
+Editable fields (name, photo, email), language preference, delete account,
+saved destinations list.
+
+Admin / Analytics Dashboard (Optional)
+- Description: Admin-only interface to track user trends, trip data, and
+platform usage.
+- Purpose: Helps in monitoring app adoption, popular cities, and user
+behavior.
+- Key Functionality/Components:
+Tables and charts of trips created, top cities/activities, user engagement
+stats, user management tools.
+
+
+## Mockup Link
+  [Mockup Link](https://link.excalidraw.com/l/65VNwvy7c4X/6CzbTgEeSr1)
+
+
 
   ## Team Details
   ### Team Nam : Synergy
